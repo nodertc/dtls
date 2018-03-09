@@ -1,0 +1,57 @@
+{
+  "name": "dtls",
+  "version": "0.0.0",
+  "description": "Datagram Transport Layer Security protocol in pure js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js"
+  },
+  "keywords": [
+    "dtls",
+    "tls",
+    "secure",
+    "udp",
+    "dgram"
+  ],
+  "author": "Dmitriy Tsvettsikh <me@reklatsmasters.com>",
+  "license": "MIT",
+  "dependencies": {
+    "binary-data": "^0.3.0",
+    "debug": "^3.1.0",
+    "is-dtls": "^2.0.0",
+    "pump": "^3.0.0",
+    "streamfilter": "^1.0.7",
+    "unicast": "^1.1.0"
+  },
+  "devDependencies": {
+    "gcore": "0.0.3",
+    "jest": "^22.1.4",
+    "longjohn": "^0.2.12",
+    "xo": "^0.18.2"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "testRegex": "test/(.*)\\.js$",
+    "coverageDirectory": "<rootDir>/coverage",
+    "coveragePathIgnorePatterns": [
+      "/test/",
+      "/testing/"
+    ]
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "rules": {
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    },
+    "ignores": [
+      "**/test/**"
+    ]
+  }
+}
