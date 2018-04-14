@@ -14,7 +14,6 @@ describe('client session', () => {
 
   it('should send ClientHello', () => {
     const session = new ClientSession()
-    expect(process.nextTick).toBeCalled()
 
     session.sendClientHello()
     expect(session.sendHandshake).toHaveBeenCalledTimes(1)
