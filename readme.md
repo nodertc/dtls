@@ -9,12 +9,17 @@ Datagram Transport Layer Security Version 1.2 in pure js.
 
 ### Work in progress
 
-### How to test?
+### How to debug?
 
 Start openssl dtls server:
 
 ```sh
-npm run
+npm run openssl-server
+```
+
+Start client:
+```sh
+npm start
 ```
 
 ## Lincense
