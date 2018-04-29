@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
-    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js"
+    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js",
+    "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug"
   },
   "keywords": [
     "dtls",
@@ -17,7 +18,8 @@
   "author": "Dmitriy Tsvettsikh <me@reklatsmasters.com>",
   "license": "MIT",
   "dependencies": {
-    "binary-data": "^0.3.0",
+    "asn1.js": "^4.10.1",
+    "binary-data": "git+https://github.com/reklatsmasters/binary-data.git",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
     "pump": "^3.0.0",
@@ -25,7 +27,6 @@
     "unicast": "^1.1.0"
   },
   "devDependencies": {
-    "gcore": "0.0.3",
     "jest": "^22.1.4",
     "longjohn": "^0.2.12",
     "xo": "^0.18.2"
@@ -48,7 +49,8 @@
       "object-curly-spacing": [
         "error",
         "always"
-      ]
+      ],
+      "camelcase": "off"
     },
     "ignores": [
       "**/test/**"
