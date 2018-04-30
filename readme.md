@@ -24,8 +24,6 @@ or start GnuTLS dtls server (more debug messages):
 npm run gnutls-server
 ```
 
-Use docker if you have
-
 Start client:
 
 ```sh
