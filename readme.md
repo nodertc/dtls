@@ -17,7 +17,17 @@ Start openssl dtls server:
 npm run openssl-server
 ```
 
+or start GnuTLS dtls server (more debug messages):
+
+```sh
+# tested in Ubuntu 16, use docker if you are Windows / MacOS user.
+npm run gnutls-server
+```
+
+Use docker if you have
+
 Start client:
+
 ```sh
 npm start
 ```

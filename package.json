@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx jest",
     "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js",
-    "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug"
+    "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
+    "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
   },
   "keywords": [
     "dtls",
