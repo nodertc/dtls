@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "asn1.js": "^4.10.1",
-    "binary-data": "git+https://github.com/reklatsmasters/binary-data.git",
+    "binary-data": "^0.4.0",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
     "pump": "^3.0.0",
