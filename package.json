@@ -23,6 +23,7 @@
     "binary-data": "^0.4.0",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
+    "pem-file": "^1.0.0",
     "pump": "^3.0.0",
     "streamfilter": "^1.0.7",
     "unicast": "^1.1.0"
