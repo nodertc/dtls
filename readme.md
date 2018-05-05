@@ -9,7 +9,7 @@ Datagram Transport Layer Security Version 1.2 in pure js.
 
 ### Work in progress
 
-Current status: Encryption and handshake works. There is a small issue with extracting the public key from the certificate.
+Current status: Handshake works.
 
 ### How to debug?
 
