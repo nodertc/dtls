@@ -1,12 +1,13 @@
 Error.stackTraceLimit = Infinity
 const dgram = require('dgram')
-const debug = require('debug')('dtls:udp')
+const debugUDP = require('debug')('dtls:udp')
+const debugDTLS = require('debug')('dtls:dtls')
 const dtls = require('.')
 
 const udp = dgram.createSocket('udp4')
 
 udp.on('message', data => {
-  debug('got message %s bytes', data.length)
+  debugUDP('got message %s bytes', data.length)
 })
 
 const socket = dtls.connect({
@@ -17,6 +18,10 @@ const socket = dtls.connect({
 
 socket.on('error', err => {
   throw err
+})
+
+socket.on('data', data => {
+  debugDTLS('got message "%s"', data.toString('ascii'))
 })
 
 process.on('warning', e => console.warn(e.stack))
