@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest",
+    "lint": "npx eslint --quiet .",
     "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js",
     "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
     "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
@@ -20,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "asn1.js": "^4.10.1",
-    "binary-data": "^0.4.0",
+    "binary-data": "^0.5.0-0",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
     "pem-file": "^1.0.0",
@@ -29,9 +30,11 @@
     "unicast": "^1.1.0"
   },
   "devDependencies": {
-    "jest": "^22.1.4",
+    "@comocapital/eslint-config": "^1.2.0",
+    "eslint": "^4.19.1",
+    "jest": "^23.4.2",
     "longjohn": "^0.2.12",
-    "xo": "^0.18.2"
+    "prettier": "^1.13.7"
   },
   "jest": {
     "modulePaths": [
@@ -42,20 +45,6 @@
     "coveragePathIgnorePatterns": [
       "/test/",
       "/testing/"
-    ]
-  },
-  "xo": {
-    "semicolon": false,
-    "space": 2,
-    "rules": {
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ],
-      "camelcase": "off"
-    },
-    "ignores": [
-      "**/test/**"
     ]
   }
 }

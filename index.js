@@ -1,6 +1,8 @@
-const { connect, Socket } = require('./lib/socket')
+'use strict';
+
+const { connect, Socket } = require('./lib/socket');
 
 module.exports = {
   connect,
-  Socket
-}
+  Socket,
+};
