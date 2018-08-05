@@ -1,12 +1,12 @@
 {
-  "name": "dtls",
+  "name": "@nodertc/dtls",
   "version": "0.0.0",
   "description": "Datagram Transport Layer Security protocol in pure js",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "npx jest",
     "lint": "npx eslint --quiet .",
-    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node start.js",
+    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js",
     "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
     "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
   },
@@ -22,6 +22,7 @@
   "dependencies": {
     "asn1.js": "^4.10.1",
     "binary-data": "^0.5.0-0",
+    "bl": "^2.0.1",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
     "pem-file": "^1.0.0",
