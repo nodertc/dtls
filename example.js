@@ -18,6 +18,7 @@ socket.on('error', err => {
 
 socket.on('data', data => {
   console.log('got message "%s"', data.toString('ascii'));
+  socket.close();
 });
 
 socket.once('connect', () => {
