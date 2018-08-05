@@ -19,8 +19,19 @@
     "webrtc",
     "nodertc"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodertc/dtls.git"
+  },
   "author": "Dmitriy Tsvettsikh <me@reklatsmasters.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodertc/dtls/issues"
+  },
+  "homepage": "https://github.com/nodertc/dtls#readme",
+  "engines": {
+    "node": ">=8"
+  },
   "dependencies": {
     "asn1.js": "^4.10.1",
     "binary-data": "^0.5.0-0",
