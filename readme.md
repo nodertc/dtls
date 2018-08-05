@@ -2,6 +2,8 @@
 
 Datagram Transport Layer Security Version 1.2 in pure js.
 
+[![asciicast](https://asciinema.org/a/195096.png)](https://asciinema.org/a/195096)
+
 ### Suppored ciphers:
 
 * TLS_RSA_WITH_AES_128_GCM_SHA256
@@ -67,4 +69,4 @@ npm start
 
 ## Lincense
 
-2018, (c) Dmitriy Tsvettsikh
+MIT, 2018 &copy; Dmitriy Tsvettsikh
