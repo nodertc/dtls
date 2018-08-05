@@ -1,6 +1,12 @@
 # @nodertc/dtls
 
-Datagram Transport Layer Security Version 1.2 in pure js.
+[![Build Status](https://travis-ci.org/nodertc/dtls.svg?branch=master)](https://travis-ci.org/nodertc/dtls)
+[![npm](https://img.shields.io/npm/v/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
+[![node](https://img.shields.io/node/v/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
+[![license](https://img.shields.io/npm/l/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
+[![downloads](https://img.shields.io/npm/dm/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
+
+Datagram Transport Layer Security Version 1.2 in pure js. Follow [RFC6347](https://tools.ietf.org/html/rfc6347).
 
 [![asciicast](https://asciinema.org/a/195096.png)](https://asciinema.org/a/195096)
 
