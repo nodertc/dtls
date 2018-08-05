@@ -1,6 +1,6 @@
 {
   "name": "@nodertc/dtls",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Datagram Transport Layer Security protocol in pure js",
   "main": "src/index.js",
   "scripts": {
