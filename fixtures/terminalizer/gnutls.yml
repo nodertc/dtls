@@ -1,0 +1,181 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/dtsvet/develop/projects/dtls
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 114
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 100
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a url, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+
+  # The size of the font
+  fontSize: 12
+
+  # The height of lines
+  lineHeight: 1
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+
+# Records, feel free to edit them
+records:
+  - delay: 289
+    content: "\e]0;dtsvet@dtsvet:~/develop/projects/dtls\a\e]7;file://dtsvet/home/dtsvet/develop/projects/dtls\a\e]0;dtsvet@dtsvet: ~/develop/projects/dtls\a\e[01;32mdtsvet@dtsvet\e[00m:\e[01;34m~/develop/projects/dtls\e[00m$ "
+  - delay: 1259
+    content: 'n'
+  - delay: 162
+    content: p
+  - delay: 160
+    content: m
+  - delay: 60
+    content: ' '
+  - delay: 378
+    content: r
+  - delay: 366
+    content: u
+  - delay: 258
+    content: 'n'
+  - delay: 239
+    content: ' '
+  - delay: 488
+    content: g
+  - delay: 209
+    content: 'n'
+  - delay: 271
+    content: u
+  - delay: 351
+    content: 't'
+  - delay: 209
+    content: 'l'
+  - delay: 271
+    content: s
+  - delay: 701
+    content: '-'
+  - delay: 295
+    content: s
+  - delay: 240
+    content: e
+  - delay: 100
+    content: r
+  - delay: 256
+    content: v
+  - delay: 118
+    content: e
+  - delay: 102
+    content: r
+  - delay: 1054
+    content: "\r\n"
+  - delay: 234
+    content: "\r\n> @nodertc/dtls@0.1.0 gnutls-server /home/dtsvet/develop/projects/dtls\r\n> cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls\r\n\r\n"
+  - delay: 8
+    content: "gnutls[2]: Enabled GnuTLS 3.6.2 logging...\r\ngnutls[2]: getrandom random generator was detected\r\ngnutls[2]: Intel SSSE3 was detected\r\ngnutls[2]: Intel AES accelerator was detected\r\ngnutls[2]: Intel GCM accelerator (AVX) was detected\r\ngnutls[2]: unable to access: /etc/gnutls/default-priorities: 2\r\n"
+  - delay: 41
+    content: "gnutls[3]: ASSERT: common.c[_gnutls_x509_get_raw_field2]:1558\r\ngnutls[3]: ASSERT: x509.c[gnutls_x509_crt_get_subject_unique_id]:3819\r\ngnutls[3]: ASSERT: x509.c[gnutls_x509_crt_get_issuer_unique_id]:3869\r\n"
+  - delay: 5
+    content: "gnutls[3]: ASSERT: attributes.c[_x509_parse_attribute]:103\r\ngnutls[3]: ASSERT: attributes.c[_x509_parse_attribute]:174\r\ngnutls[3]: ASSERT: x509_ext.c[gnutls_subject_alt_names_get]:110\r\ngnutls[3]: ASSERT: x509.c[get_alt_name]:1811\r\ngnutls[2]: added 53 ciphersuites, 11 sig algos and 8 groups into priority list\r\nUDP server ready. Listening to port '4444'.\r\n\r\nWaiting for connection...\r\n"
+  - delay: 6975
+    content: "gnutls[3]: ASSERT: dtls.c[gnutls_dtls_cookie_verify]:988\r\nSending hello verify request to IPv4 127.0.0.1 port 47079\r\nWaiting for connection...\r\nAccepted connection from IPv4 127.0.0.1 port 47079\r\ngnutls[5]: REC[0x14be4e0]: Allocating epoch #0\r\ngnutls[5]: REC[0x14be4e0]: Allocating epoch #1\r\n"
+  - delay: 50
+    content: "gnutls[3]: ASSERT: buffers.c[get_last_packet]:1161\r\ngnutls[10]: READ: Got 85 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: READ: read 85 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: RB: Have 0 bytes into buffer. Adding 85 bytes.\r\ngnutls[10]: RB: Requested 13 bytes\r\ngnutls[5]: REC[0x14be4e0]: SSL 254.253 Handshake packet received. Epoch 0, length: 72\r\ngnutls[5]: REC[0x14be4e0]: Expected Packet Handshake(22)\r\ngnutls[5]: REC[0x14be4e0]: Received Packet Handshake(22) with length: 72\r\ngnutls[5]: REC[0x14be4e0]: Decrypted Packet[0.2] Handshake(22) with length: 72\r\ngnutls[13]: BUF[REC]: Inserted 72 bytes of Data(22)\r\ngnutls[4]: HSK[0x14be4e0]: CLIENT HELLO (1) was received. Length 60[60], frag offset 0, frag length: 60, sequence: 1\r\ngnutls[4]: HSK[0x14be4e0]: Client's version: 254.253\r\ngnutls[4]: HSK[0x14be4e0]: Selected version DTLS1.2\r\ngnutls[3]: ASSERT: db.c[_gnutls_server_restore_session]:276\r\ngnutls[2]: checking 00.9c (GNUTLS_RSA_AES_128_GCM_SHA256) for compatibility\r\ngnutls[3]: ASSERT: server_name.c[gnutls_server_name_get]:259\r\ngnutls[4]: HSK[0x14be4e0]: Requested server name: ''\r\ngnutls[4]: HSK[0x14be4e0]: checking compat of GNUTLS_RSA_AES_128_GCM_SHA256 with certificate[0] (RSA/X.509)\r\ngnutls[2]: Selected (RSA) cert based on ciphersuite 0.9c: GNUTLS_RSA_AES_128_GCM_SHA256\r\ngnutls[4]: HSK[0x14be4e0]: Selected cipher suite: GNUTLS_RSA_AES_128_GCM_SHA256\r\ngnutls[4]: HSK[0x14be4e0]: Allowing unsafe initial negotiation\r\ngnutls[4]: HSK[0x14be4e0]: SessionID: d468d846cc9f369cf8aef1233e39783905f17dbc69eb424875a3374f471c9c86\r\ngnutls[4]: HSK[0x14be4e0]: SERVER HELLO was queued [82 bytes]\r\ngnutls[11]: HWRITE: enqueued [SERVER HELLO] 82. Total 82 bytes.\r\ngnutls[4]: HSK[0x14be4e0]: CERTIFICATE was queued [847 bytes]\r\ngnutls[11]: HWRITE: enqueued [CERTIFICATE] 847. Total 929 bytes.\r\ngnutls[4]: HSK[0x14be4e0]: SERVER HELLO DONE was queued [12 bytes]\r\ngnutls[11]: HWRITE: enqueued [SERVER HELLO DONE] 12. Total 941 bytes.\r\ngnutls[11]: HWRITE FLUSH: 941 bytes in buffer.\r\ngnutls[6]: DTLS[0x14be4e0]: Start of flight transmission.\r\ngnutls[6]: DTLS[0x14be4e0]: Sending Packet[1] fragment SERVER HELLO(2) with length: 70, offset: 0, fragment length: 70, mtu: 1375\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet Handshake(22) with length: 82 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: NULL, MAC: MAC-NULL, Epoch: 0\r\ngnutls[11]: WRITE: enqueued 95 bytes for 0x7fffb8fbefc0. Total 95 bytes.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[3] Handshake(22) in epoch 0 and length: 95\r\ngnutls[6]: DTLS[0x14be4e0]: Sending Packet[2] fragment CERTIFICATE(11) with length: 835, offset: 0, fragment length: 835, mtu: 1375\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet Handshake(22) with length: 847 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: NULL, MAC: MAC-NULL, Epoch: 0\r\ngnutls[11]: WRITE: enqueued 860 bytes for 0x7fffb8fbefc0. Total 955 bytes.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[4] Handshake(22) in epoch 0 and length: 860\r\ngnutls[6]: DTLS[0x14be4e0]: Sending Packet[3] fragment SERVER HELLO DONE(14) with length: 0, offset: 0, fragment length: 0, mtu: 1375\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet Handshake(22) with length: 12 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: NULL, MAC: MAC-NULL, Epoch: 0\r\ngnutls[11]: WRITE: enqueued 25 bytes for 0x7fffb8fbefc0. Total 980 bytes.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[5] Handshake(22) in epoch 0 and length: 25\r\ngnutls[11]: WRITE FLUSH: 980 bytes in buffer.\r\ngnutls[11]: WRITE: wrote 980 bytes, 0 bytes left.\r\n"
+  - delay: 50
+    content: "gnutls[10]: READ: Got 283 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: READ: read 283 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: RB: Have 0 bytes into buffer. Adding 283 bytes.\r\ngnutls[10]: RB: Requested 13 bytes\r\ngnutls[5]: REC[0x14be4e0]: SSL 254.253 Handshake packet received. Epoch 0, length: 270\r\ngnutls[5]: REC[0x14be4e0]: Expected Packet Handshake(22)\r\ngnutls[5]: REC[0x14be4e0]: Received Packet Handshake(22) with length: 270\r\ngnutls[5]: REC[0x14be4e0]: Decrypted Packet[0.3] Handshake(22) with length: 270\r\ngnutls[13]: BUF[REC]: Inserted 270 bytes of Data(22)\r\ngnutls[4]: HSK[0x14be4e0]: CLIENT KEY EXCHANGE (16) was received. Length 258[258], frag offset 0, frag length: 258, sequence: 2\r\ngnutls[6]: DTLS[0x14be4e0]: End of flight transmission.\r\ngnutls[3]: ASSERT: buffers.c[_gnutls_handshake_io_recv_int]:1377\r\ngnutls[10]: READ: Got 14 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: READ: read 14 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: RB: Have 0 bytes into buffer. Adding 14 bytes.\r\ngnutls[10]: RB: Requested 13 bytes\r\ngnutls[5]: REC[0x14be4e0]: SSL 254.253 ChangeCipherSpec packet received. Epoch 0, length: 1\r\ngnutls[5]: REC[0x14be4e0]: Expected Packet ChangeCipherSpec(20)\r\ngnutls[5]: REC[0x14be4e0]: Received Packet ChangeCipherSpec(20) with length: 1\r\ngnutls[5]: REC[0x14be4e0]: Decrypted Packet[0.4] ChangeCipherSpec(20) with length: 1\r\ngnutls[13]: BUF[REC]: Inserted 1 bytes of Data(20)\r\ngnutls[9]: INT: PREMASTER SECRET[48]: fefd1948c486f01cf69c395872cbcf726406c620806456c66a7888ac65c6974bcbe21ad32b7d494d2935a48677d1dbec\r\ngnutls[9]: INT: CLIENT RANDOM[32]: 5b6934f01d671279588834ff46e2066952fac58d2a1ef046765327f5ab8ab50b\r\ngnutls[9]: INT: SERVER RANDOM[32]: 5b6934c2b88be93f6ef438d5d029e3c12271fc697cf209d4ca8af1f5a68cec45\r\ngnutls[9]: INT: MASTER SECRET: 06f125edfc19df4daee151548782c914a633923c10dfe905346264b59fc18ea69cafcc70c23a970e14decefeed36e10a\r\ngnutls[5]: REC[0x14be4e0]: Initializing epoch #1\r\ngnutls[9]: INT: KEY BLOCK[40]: 406758aa99ebbb252c8a9fc2319af6e4dcb80a68a15bdba3534bcf1016616a79\r\ngnutls[9]: INT: CLIENT WRITE KEY [16]: 406758aa99ebbb252c8a9fc2319af6e4\r\ngnutls[9]: INT: SERVER WRITE KEY [16]: dcb80a68a15bdba3534bcf1016616a79\r\ngnutls[9]: INT: CLIENT WRITE IV [4]: 8f6ec8cb\r\ngnutls[9]: INT: SERVER WRITE IV [4]: e08c8261\r\ngnutls[5]: REC[0x14be4e0]: Epoch #1 ready\r\ngnutls[4]: HSK[0x14be4e0]: Cipher Suite: GNUTLS_RSA_AES_128_GCM_SHA256\r\n"
+  - delay: 50
+    content: "gnutls[3]: ASSERT: buffers.c[get_last_packet]:1161\r\ngnutls[10]: READ: Got 61 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: READ: read 61 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: RB: Have 0 bytes into buffer. Adding 61 bytes.\r\ngnutls[10]: RB: Requested 13 bytes\r\ngnutls[5]: REC[0x14be4e0]: SSL 254.253 Handshake packet received. Epoch 1, length: 48\r\ngnutls[5]: REC[0x14be4e0]: Expected Packet Handshake(22)\r\ngnutls[5]: REC[0x14be4e0]: Received Packet Handshake(22) with length: 48\r\ngnutls[5]: REC[0x14be4e0]: Decrypted Packet[1.5] Handshake(22) with length: 24\r\ngnutls[13]: BUF[REC]: Inserted 24 bytes of Data(22)\r\ngnutls[4]: HSK[0x14be4e0]: FINISHED (20) was received. Length 12[12], frag offset 0, frag length: 12, sequence: 3\r\ngnutls[3]: ASSERT: safe_renegotiation.c[_gnutls_ext_sr_finished]:63\r\ngnutls[4]: HSK[0x14be4e0]: recording tls-unique CB (recv)\r\ngnutls[11]: HWRITE: enqueued [CHANGE CIPHER SPEC] 1. Total 1 bytes.\r\ngnutls[4]: REC[0x14be4e0]: Sent ChangeCipherSpec\r\ngnutls[4]: HSK[0x14be4e0]: Cipher Suite: GNUTLS_RSA_AES_128_GCM_SHA256\r\ngnutls[4]: HSK[0x14be4e0]: Initializing internal [write] cipher sessions\r\ngnutls[3]: ASSERT: safe_renegotiation.c[_gnutls_ext_sr_finished]:63\r\ngnutls[4]: HSK[0x14be4e0]: FINISHED was queued [24 bytes]\r\ngnutls[11]: HWRITE: enqueued [FINISHED] 24. Total 25 bytes.\r\ngnutls[11]: HWRITE FLUSH: 25 bytes in buffer.\r\ngnutls[6]: DTLS[0x14be4e0]: Start of flight transmission.\r\ngnutls[6]: DTLS[0x14be4e0]: Sending Packet[3] fragment CHANGE CIPHER SPEC(254), mtu 1351\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet ChangeCipherSpec(20) with length: 1 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: NULL, MAC: MAC-NULL, Epoch: 0\r\ngnutls[11]: WRITE: enqueued 14 bytes for 0x7fffb8fbefc0. Total 14 bytes.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[6] ChangeCipherSpec(20) in epoch 0 and length: 14\r\ngnutls[6]: DTLS[0x14be4e0]: Sending Packet[4] fragment FINISHED(20) with length: 12, offset: 0, fragment length: 12, mtu: 1351\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet Handshake(22) with length: 24 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: AES-128-GCM, MAC: AEAD, Epoch: 1\r\ngnutls[11]: WRITE: enqueued 61 bytes for 0x7fffb8fbefc0. Total 75 bytes.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[1] Handshake(22) in epoch 1 and length: 61\r\ngnutls[11]: WRITE FLUSH: 75 bytes in buffer.\r\ngnutls[11]: WRITE: wrote 75 bytes, 0 bytes left.\r\ngnutls[6]: DTLS[0x14be4e0]: Initializing timer for handshake state.\r\ngnutls[5]: REC[0x14be4e0]: Start of epoch cleanup\r\ngnutls[5]: REC[0x14be4e0]: Note inactive epoch 0 has 1 users\r\ngnutls[5]: REC[0x14be4e0]: End of epoch cleanup\r\n- Handshake was completed\r\n"
+  - delay: 8
+    content: "gnutls[10]: READ: Got 56 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: READ: read 56 bytes from 0x7fffb8fbefc0\r\ngnutls[10]: RB: Have 0 bytes into buffer. Adding 56 bytes.\r\ngnutls[10]: RB: Requested 13 bytes\r\ngnutls[5]: REC[0x14be4e0]: SSL 254.253 Application Data packet received. Epoch 1, length: 43\r\ngnutls[5]: REC[0x14be4e0]: Expected Packet Application Data(23)\r\ngnutls[5]: REC[0x14be4e0]: Received Packet Application Data(23) with length: 43\r\ngnutls[5]: REC[0x14be4e0]: Decrypted Packet[1.6] Application Data(23) with length: 19\r\ngnutls[13]: BUF[REC]: Inserted 19 bytes of Data(23)\r\ngnutls[6]: DTLS[0x14be4e0]: Deinitializing previous handshake state.\r\ngnutls[5]: REC[0x14be4e0]: Start of epoch cleanup\r\ngnutls[5]: REC[0x14be4e0]: Epoch #0 freed\r\ngnutls[5]: REC[0x14be4e0]: End of epoch cleanup\r\nreceived[0001000000000006]: Hello from Node.js!\r\ngnutls[5]: REC[0x14be4e0]: Preparing Packet Application Data(23) with length: 19 and min pad: 0\r\ngnutls[9]: ENC[0x14be4e0]: cipher: AES-128-GCM, MAC: AEAD, Epoch: 1\r\ngnutls[11]: WRITE: enqueued 56 bytes for 0x7fffb8fbefc0. Total 56 bytes.\r\ngnutls[11]: WRITE FLUSH: 56 bytes in buffer.\r\ngnutls[11]: WRITE: wrote 56 bytes, 0 bytes left.\r\ngnutls[5]: REC[0x14be4e0]: Sent Packet[2] Application Data(23) in epoch 1 and length: 56\r\n"
+  - delay: 756
+    content: ^C
+  - delay: 12
+    content: "\r\n"

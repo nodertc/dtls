@@ -1,0 +1,153 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/dtsvet/develop/projects/dtls
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 141
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 100
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a url, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+
+  # The size of the font
+  fontSize: 12
+
+  # The height of lines
+  lineHeight: 1
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+
+# Records, feel free to edit them
+records:
+  - delay: 263
+    content: "\e]0;dtsvet@dtsvet:~/develop/projects/dtls\a\e]7;file://dtsvet/home/dtsvet/develop/projects/dtls\a\e]0;dtsvet@dtsvet: ~/develop/projects/dtls\a\e[01;32mdtsvet@dtsvet\e[00m:\e[01;34m~/develop/projects/dtls\e[00m$ "
+  - delay: 275
+    content: 'n'
+  - delay: 121
+    content: p
+  - delay: 100
+    content: m
+  - delay: 103
+    content: ' '
+  - delay: 527
+    content: s
+  - delay: 119
+    content: t
+  - delay: 123
+    content: a
+  - delay: 79
+    content: r
+  - delay: 180
+    content: t
+  - delay: 688
+    content: "\r\n"
+  - delay: 237
+    content: "\r\n> @nodertc/dtls@0.1.0 start /home/dtsvet/develop/projects/dtls\r\n> DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js\r\n\r\n"
+  - delay: 219
+    content: "  \e[34;1mdtls:session \e[0mstart handshake \e[34m+0ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mprepare client hello \e[32m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msend Client Hello \e[35m+0ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 1 \e[34m+6ms\e[0m\r\n  \e[35;1mdtls:sender \e[0mencrypt, cipher = NULL \e[35m+2ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msuccess \e[35m+0ms\e[0m\r\n"
+  - delay: 5
+    content: "  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 44 bytes \e[31m+1ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+0ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+0ms\e[0m\r\n  \e[32;1mdtls:fragment \e[0mgot full handshake \e[32m+0ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot hello verify request \e[32m+11ms\e[0m\r\n  \e[34;1mdtls:session \e[0mreset handshake queue \e[34m+8ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot cookie d96e13835a38ef4e6e2bdfcd3a70ad9b \e[32m+0ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mprepare client hello \e[32m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msend Client Hello \e[35m+8ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 1 \e[34m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0mencrypt, cipher = NULL \e[35m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msuccess \e[35m+0ms\e[0m\r\n"
+  - delay: 53
+    content: "  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+56ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+55ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 95 bytes \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+0ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+56ms\e[0m\r\n  \e[32;1mdtls:fragment \e[0mgot full handshake \e[32m+56ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot server hello \e[32m+56ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mserver selected TLS_RSA_WITH_AES_128_GCM_SHA256 cipher \e[32m+1ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 2 \e[34m+58ms\e[0m\r\n  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+5ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+5ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 860 bytes \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+0ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+4ms\e[0m\r\n  \e[32;1mdtls:fragment \e[0mgot full handshake \e[32m+5ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot server certificate \e[32m+3ms\e[0m\r\n"
+  - delay: 37
+    content: "  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 11 \e[34m+39ms\e[0m\r\n  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+39ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+38ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 25 bytes \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+0ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+39ms\e[0m\r\n  \e[32;1mdtls:fragment \e[0mgot full handshake \e[32m+38ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot server hello done \e[32m+38ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 14 \e[34m+1ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mprepare client key exchange \e[32m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msend Client Key Exchange \e[35m+98ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 16 \e[34m+1ms\e[0m\r\n  \e[35;1mdtls:sender \e[0mencrypt, cipher = NULL \e[35m+1ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msuccess \e[35m+0ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mprepare change cipher spec \e[32m+1ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msend Change Cipher Spec \e[35m+1ms\e[0m\r\n  \e[34;1mdtls:cipher:aead \e[0mclient iv <Buffer 8f 6e c8 cb> \e[34m+0ms\e[0m\r\n  \e[34;1mdtls:cipher:aead \e[0mserver iv <Buffer e0 8c 82 61> \e[34m+1ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mprepare client finished \e[32m+3ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mclient finished 4c333ee2ceeb8520d753225c \e[32m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msend Finished \e[35m+2ms\e[0m\r\n  \e[34;1mdtls:session \e[0mpacket added to handshake queue, type = 20 \e[34m+3ms\e[0m\r\n  \e[35;1mdtls:sender \e[0mencrypt, cipher = aes-128-gcm \e[35m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msuccess \e[35m+1ms\e[0m\r\n"
+  - delay: 52
+    content: "  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+58ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+59ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 14 bytes \e[31m+0ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+58ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot change cipher spec \e[32m+54ms\e[0m\r\n  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+2ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+1ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 61 bytes \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+2ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+3ms\e[0m\r\n  \e[32;1mdtls:fragment \e[0mgot full handshake \e[32m+61ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot finished \e[32m+4ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mserver finished c01deaab5f83c2e191bb0d55 \e[32m+0ms\e[0m\r\n  \e[34;1mdtls:session \e[0mstop handshake \e[34m+58ms\e[0m\r\n  \e[34;1mdtls:session \e[0mreset handshake queue \e[34m+0ms\e[0m\r\n  \e[35;1mdtls:sender \e[0mencrypt, cipher = aes-128-gcm \e[35m+58ms\e[0m\r\n  \e[35;1mdtls:sender \e[0msuccess \e[35m+1ms\e[0m\r\n  \e[33;1mdtls:socket \e[0mgot message, is dtls = true \e[33m+6ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mprocess new chunk \e[31m+5ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecoded 56 bytes \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecrypt record layer \e[31m+0ms\e[0m\r\n  \e[31;1mdtls:decoder \e[0mdecryption success \e[31m+1ms\e[0m\r\n  \e[33;1mdtls:reorder \e[0msuccess \e[33m+6ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mgot application data \e[32m+5ms\e[0m\r\n  \e[32;1mdtls:protocol-reader \e[0mpacket: 48656c6c6f2066726f6d204e6f64652e6a7321 \e[32m+0ms\e[0m\r\ngot message \"Hello from Node.js!\"\r\n"
+  - delay: 37
+    content: "\e]0;dtsvet@dtsvet:~/develop/projects/dtls\a\e]7;file://dtsvet/home/dtsvet/develop/projects/dtls\a\e]0;dtsvet@dtsvet: ~/develop/projects/dtls\a\e[01;32mdtsvet@dtsvet\e[00m:\e[01;34m~/develop/projects/dtls\e[00m$ "
+  - delay: 1350
+    content: "^C\r\n"
+  - delay: 10
+    content: "\e]0;dtsvet@dtsvet:~/develop/projects/dtls\a\e]7;file://dtsvet/home/dtsvet/develop/projects/dtls\a\e]0;dtsvet@dtsvet: ~/develop/projects/dtls\a\e[01;32mdtsvet@dtsvet\e[00m:\e[01;34m~/develop/projects/dtls\e[00m$ "

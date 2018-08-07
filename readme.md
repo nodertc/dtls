@@ -8,7 +8,8 @@
 
 Datagram Transport Layer Security Version 1.2 in pure js. Follow [RFC6347](https://tools.ietf.org/html/rfc6347).
 
-[![asciicast](https://asciinema.org/a/195096.png)](https://asciinema.org/a/195096)
+[![asciicast](fixtures/terminalizer/render1533622791504.gif)](https://asciinema.org/a/195096)
+![asciicast](fixtures/terminalizer/render1533622385765.gif)
 
 ### Suppored ciphers:
 
