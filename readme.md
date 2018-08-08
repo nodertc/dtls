@@ -68,7 +68,6 @@ npm start
 ## TODO
 
 * [ ] handle reordered handshake messages
-* [ ] timers and retransmission state machine
 * [ ] set MTU and outgoing fragmentation
 * [ ] set ALPN
 * [ ] server
