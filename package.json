@@ -1,7 +1,7 @@
 {
   "name": "@nodertc/dtls",
   "version": "0.1.0",
-  "description": "Datagram Transport Layer Security protocol in pure js",
+  "description": "Secure UDP communications using DTLS.",
   "main": "src/index.js",
   "scripts": {
     "test": "npm run lint",
