@@ -113,6 +113,6 @@ npm start
 * [ ] handle rehandshake
 * [ ] heartbleat extension
 
-## Lincense
+## License
 
 MIT, 2018 &copy; Dmitriy Tsvettsikh
