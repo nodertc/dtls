@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/npm/l/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
 [![downloads](https://img.shields.io/npm/dm/@nodertc/dtls.svg)](https://www.npmjs.com/package/@nodertc/dtls)
 
-Secure UDP communications using Datagram Transport Layer Security protocol version 1.2 in **pure js**. Follow [RFC6347](https://tools.ietf.org/html/rfc6347).
+Secure UDP communications using Datagram Transport Layer Security protocol version 1.2 in **pure js**. Follow [RFC6347](https://tools.ietf.org/html/rfc6347), [RFC7627](https://tools.ietf.org/html/rfc7627).
 
 [![asciicast](fixtures/terminalizer/render1533622791504.gif)](https://asciinema.org/a/195096)
 
@@ -65,6 +65,10 @@ The `callback` function, if specified, will be added as a listener for the 'conn
 * `options.socket`
 
 Optional [unicast](https://www.npmjs.com/package/unicast) or [dgram](https://nodejs.org/dist/latest-v8.x/docs/api/dgram.html) socket instance. Used if you want a low level control of your connection.
+
+* `options.extendedMasterSecret: bool, [default=true]`
+
+This option enable the use [Extended Master Secret](https://tools.ietf.org/html/rfc7627) extension. Enabled by default.
 
 * `class Socket`
 
