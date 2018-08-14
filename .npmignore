@@ -5,3 +5,4 @@ fixtures
 .eslintrc.js
 .gitignore
 .travis.yml
+CHANGELOG.md
