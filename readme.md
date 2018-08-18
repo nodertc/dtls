@@ -13,7 +13,7 @@ Secure UDP communications using Datagram Transport Layer Security protocol versi
 ### Features
 
 * no native dependecies!
-* modern secure ciphers - AEAD (`AES GCM` right now and `CHACHA20-POLY1305` in future)
+* modern secure ciphers - AEAD with ECDHE
 * support set / get MTU
 * in / out handshake fragmentation
 * handshake retransmission
@@ -49,6 +49,8 @@ socket.once('connect', () => {
 
 ### Suppored ciphers:
 
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_RSA_WITH_AES_128_GCM_SHA256
 * TLS_RSA_WITH_AES_256_GCM_SHA384
 * TLS_RSA_WITH_AES_128_CCM
