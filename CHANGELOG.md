@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to the "dtls" package will be documented in this file.
 
-## unreleased
+## [0.3.0] - 2018-08-22
 - Added [AES CCM](https://tools.ietf.org/html/rfc6655) cipers
   * TLS_RSA_WITH_AES_128_CCM
   * TLS_RSA_WITH_AES_256_CCM
