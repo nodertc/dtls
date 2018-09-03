@@ -4,8 +4,9 @@
   "description": "Secure UDP communications using DTLS.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && npm run unit-test",
     "lint": "npx eslint --quiet .",
+    "unit-test": "npx jest",
     "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js",
     "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
     "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
@@ -40,19 +41,21 @@
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
     "readable-stream": "^3.0.0",
+    "sorted-array-functions": "^1.2.0",
     "streamfilter": "^1.0.7",
     "unicast": "^1.1.0"
   },
   "devDependencies": {
     "@comocapital/eslint-config": "^1.2.0",
     "eslint": "^4.19.1",
-    "hex": "^0.1.0",
-    "jest": "^23.4.2",
+    "jest": "^23.5.0",
     "prettier": "^1.13.7"
   },
   "jest": {
     "modulePaths": [
-      "<rootDir>"
+      "<rootDir>",
+      "<rootDir>/src",
+      "<rootDir>/src/node_modules"
     ],
     "testRegex": "test/(.*)\\.js$"
   }

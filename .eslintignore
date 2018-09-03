@@ -2,7 +2,6 @@
 /lib
 /fixtures
 /redux
-/test
 
 # IDE
 .idea

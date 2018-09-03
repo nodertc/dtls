@@ -9,5 +9,11 @@ module.exports = {
 
     // Conflicts with Prettier
     'unicorn/number-literal-case': 'off',
+  },
+  overrides: {
+    files: [ 'test/**/*.js' ],
+    rules: {
+      'import/no-unresolved': 'off'
+    }
   }
 }
