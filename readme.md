@@ -77,6 +77,10 @@ Optional [unicast](https://www.npmjs.com/package/unicast) or [dgram](https://nod
 
 This option enable the use [Extended Master Secret](https://tools.ietf.org/html/rfc7627) extension. Enabled by default.
 
+* `options.checkServerIdentity: function(certificate): bool`
+
+Optional certificate verify function.
+
 * `class Socket`
 
 A `Socket` is also a [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex), so it can be both readable and writable, and it is also a [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter).
