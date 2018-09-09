@@ -81,6 +81,14 @@ This option enable the use [Extended Master Secret](https://tools.ietf.org/html/
 
 Optional certificate verify function.
 
+* `options.certificate: Buffer`
+
+PEM-encoded client certificate, optional. Supports RSASSA-PKCS1-v1_5 and ECDSA certificates.
+
+* `options.certificatePrivateKey: Buffer`
+
+PEM-encoded private key for client certificate.
+
 * `class Socket`
 
 A `Socket` is also a [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex), so it can be both readable and writable, and it is also a [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter).
