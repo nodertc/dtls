@@ -130,14 +130,6 @@ Start default client:
 npm start
 ```
 
-## TODO
-
-* [ ] handle reordered handshake messages
-* [ ] set ALPN
-* [ ] server
-* [ ] handle rehandshake
-* [ ] heartbleat extension
-
 ## License
 
 MIT, 2018 &copy; Dmitriy Tsvettsikh
