@@ -71,7 +71,7 @@ The `callback` function, if specified, will be added as a listener for the 'conn
 
 * `options.socket`
 
-Optional [unicast](https://www.npmjs.com/package/unicast) or [dgram](https://nodejs.org/dist/latest-v8.x/docs/api/dgram.html) socket instance. Used if you want a low level control of your connection.
+A [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex) in a common case. It is also [unicast](https://www.npmjs.com/package/unicast) or [dgram](https://nodejs.org/dist/latest-v8.x/docs/api/dgram.html) socket instance. Used if you want a low level control of your connection.
 
 * `options.extendedMasterSecret: bool, [default=true]`
 

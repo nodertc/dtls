@@ -40,6 +40,7 @@
     "bl": "^2.0.1",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
+    "is-stream": "^1.1.0",
     "readable-stream": "^3.0.0",
     "sorted-array-functions": "^1.2.0",
     "streamfilter": "^1.0.7",
