@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/nodertc/dtls#readme",
   "engines": {
-    "node": ">=8"
+    "node": ">=8.3"
   },
   "dependencies": {
     "@fidm/asn1": "^1.0.2",
@@ -47,10 +47,10 @@
     "unicast": "^1.1.0"
   },
   "devDependencies": {
-    "@comocapital/eslint-config": "^1.2.0",
-    "eslint": "^4.19.1",
-    "jest": "^23.5.0",
-    "prettier": "^1.13.7"
+    "@nodertc/eslint-config": "^0.2.1",
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3"
   },
   "jest": {
     "modulePaths": [
@@ -58,6 +58,67 @@
       "<rootDir>/src",
       "<rootDir>/src/node_modules"
     ],
-    "testRegex": "test/(.*)\\.js$"
+    "testMatch": [
+      "**/test/**/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverageFrom": [
+      "**/src/*.js",
+      "**/src/node_modules/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest-cache",
+    "haste": {
+      "providesModuleNodeModules": [
+        "cipher",
+        "filter",
+        "fsm",
+        "lib",
+        "session",
+        "utils"
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": "@nodertc",
+    "rules": {
+      "no-underscore-dangle": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "test/**/*.js"
+        ],
+        "env": {
+          "jest": true
+        },
+        "settings": {
+          "import/resolver": {
+            "node": {
+              "moduleDirectory": [
+                "node_modules",
+                "src",
+                "src/node_modules"
+              ]
+            }
+          }
+        },
+        "rules": {
+          "require-jsdoc": "off"
+        }
+      },
+      {
+        "files": [ "example.js" ],
+        "rules": {
+          "no-console": "off",
+          "security/detect-non-literal-fs-filename": "off"
+        }
+      }
+    ]
   }
 }

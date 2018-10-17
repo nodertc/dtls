@@ -6,15 +6,7 @@ const Emitter = require('events');
 const Reordering = require('filter/reordering');
 const { contentType } = require('lib/constants');
 
-/**
- * @private
- * Mock
- */
 class MockSlidingWindow {
-  /**
-   * @constructor
-   * @param {bool} value
-   */
   constructor(value) {
     this._value = Boolean(value);
   }
