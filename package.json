@@ -36,7 +36,7 @@
   "dependencies": {
     "@fidm/asn1": "^1.0.2",
     "@fidm/x509": "^1.1.3",
-    "binary-data": "^0.5.0-0",
+    "binary-data": "^0.5.0",
     "bl": "^2.0.1",
     "debug": "^3.1.0",
     "is-dtls": "^2.0.0",
@@ -113,7 +113,9 @@
         }
       },
       {
-        "files": [ "example.js" ],
+        "files": [
+          "example.js"
+        ],
         "rules": {
           "no-console": "off",
           "security/detect-non-literal-fs-filename": "off"
