@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to the "dtls" package will be documented in this file.
 
+## [0.5.0] - 2018-11-17
+- Drop AES-CCM block cipher
+- Added `timeout` event to detect inactive connections
+- Added `ALPN` ([RFC 7301](https://tools.ietf.org/html/rfc7301)) extension
+- Update dependencies
+- Bug fixes
+
 ## [0.4.0] - 2018-09-10
 - Added ECDHE_ECDSA key exchange. Ciphers:
   * TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
