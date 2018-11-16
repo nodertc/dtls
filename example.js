@@ -18,6 +18,7 @@ const socket = dtls.connect({
   certificatePrivateKey: fs.readFileSync(
     path.resolve(__dirname, 'fixtures/ecc/key.pem')
   ),
+  maxHandshakeRetransmissions: 4,
 });
 
 socket.on('error', err => {
@@ -32,3 +33,9 @@ socket.on('data', data => {
 socket.once('connect', () => {
   socket.write('Hello from Node.js!');
 });
+
+socket.once('timeout', () => {
+  console.log('got timeout');
+});
+
+socket.setTimeout(5e3);

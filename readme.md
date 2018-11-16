@@ -86,6 +86,10 @@ PEM-encoded client certificate, optional. Supports RSASSA-PKCS1-v1_5 and ECDSA c
 
 PEM-encoded private key for client certificate.
 
+* `options.maxHandshakeRetransmissions: number`
+
+The number of retransmissions during on handshake stage.
+
 * `class Socket`
 
 A `Socket` is also a [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex), so it can be both readable and writable, and it is also a [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter).
@@ -98,6 +102,12 @@ Set MTU (minimal transfer unit) for this socket, 1420 bytes maximal.
 
 Return MTU (minimal transfer unit) for this socket, 1200 bytes by default.
 
+* `Socket.setTimeout(timeout: number[, callback: function()])`
+
+Sets the socket to timeout after timeout milliseconds of inactivity on the socket. By default `dtls.Socket` do not have a timeout.
+
+The optional callback parameter will be added as a one-time listener for the 'timeout' event.
+
 * `Socket.close(): void`
 
 Close socket, stop listening for socket. Do not emit `data` events anymore.
@@ -105,6 +115,10 @@ Close socket, stop listening for socket. Do not emit `data` events anymore.
 * `Event: connect`
 
 The 'connect' event is emitted after the handshaking process for a new connection has successfully completed.
+
+* `Event: timeout`
+
+Emitted if the socket times out from inactivity. This is only to notify that the socket has been idle.
 
 ### How to debug?
 
