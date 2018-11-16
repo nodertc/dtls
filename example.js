@@ -19,6 +19,7 @@ const socket = dtls.connect({
     path.resolve(__dirname, 'fixtures/ecc/key.pem')
   ),
   maxHandshakeRetransmissions: 4,
+  alpn: 'http/1.1',
 });
 
 socket.on('error', err => {

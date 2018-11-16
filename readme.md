@@ -90,6 +90,10 @@ PEM-encoded private key for client certificate.
 
 The number of retransmissions during on handshake stage.
 
+* `options.alpn: string | string[]`
+
+The list of the supported ALPN protocols.
+
 * `class Socket`
 
 A `Socket` is also a [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex), so it can be both readable and writable, and it is also a [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter).
@@ -111,6 +115,10 @@ The optional callback parameter will be added as a one-time listener for the 'ti
 * `Socket.close(): void`
 
 Close socket, stop listening for socket. Do not emit `data` events anymore.
+
+* `Socket.alpnProtocol: string`
+
+Get a string that contains the selected ALPN protocol.
 
 * `Event: connect`
 
