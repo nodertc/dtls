@@ -12,6 +12,10 @@ Secure UDP communications using Datagram Transport Layer Security protocol versi
 
 [![asciicast](fixtures/terminalizer/render1533622791504.gif)](https://asciinema.org/a/195096)
 
+### Support
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png)](https://www.buymeacoffee.com/reklatsmasters)
+
 ### Features
 
 * no native dependecies!
