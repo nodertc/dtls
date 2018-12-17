@@ -39,8 +39,7 @@
   "dependencies": {
     "@fidm/asn1": "^1.0.3",
     "@fidm/x509": "^1.2.0",
-    "binary-data": "^0.5.0",
-    "bl": "^2.1.2",
+    "binary-data": "^0.6.0",
     "debug": "^4.1.0",
     "is-dtls": "^2.0.0",
     "is-stream": "^1.1.0",
