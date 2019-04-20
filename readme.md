@@ -61,6 +61,8 @@ socket.once('connect', () => {
 * TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 * TLS_RSA_WITH_AES_128_GCM_SHA256
 * TLS_RSA_WITH_AES_256_GCM_SHA384
+* TLS_PSK_WITH_AES_128_GCM_SHA256
+* TLS_PSK_WITH_AES_256_GCM_SHA384
 
 ### API
 
@@ -97,6 +99,13 @@ The number of retransmissions during on handshake stage.
 * `options.alpn: string | string[]`
 
 The list of the supported ALPN protocols.
+* `options.pskIdentity: String|Buffer`
+
+Identity string for PSK key exchange, see [RFC4279](https://tools.ietf.org/html/rfc4279).
+
+* `options.pskSecret: String|Buffer`
+
+Secret data for the identity string of PSK key exchange.
 
 * `class Socket`
 
