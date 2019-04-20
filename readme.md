@@ -111,6 +111,16 @@ Secret data for the identity string of PSK key exchange.
 
 Both clients and servers may have pre-shared keys with several different parties.  The client indicates which key to use by including a "PSK identity" (_see `options.pskIdentity` above_) in the ClientKeyExchange message. To help the client in selecting which identity to use, the server can provide a "PSK identity hint" in the ServerKeyExchange message.
 
+* `options.cipherSuites: number[]`
+
+List of supported by client cipher suites. Default cipher suites:
+  - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+  - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+  - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+  - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+See above a full list of supported cipher suites.
+
 * `class Socket`
 
 A `Socket` is also a [duplex stream](https://nodejs.org/api/stream.html#stream_class_stream_duplex), so it can be both readable and writable, and it is also a [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter).
@@ -144,6 +154,10 @@ The 'connect' event is emitted after the handshaking process for a new connectio
 * `Event: timeout`
 
 Emitted if the socket times out from inactivity. This is only to notify that the socket has been idle.
+
+* `dtls.constants: Object`
+  - `cipherSuites: Object`
+  A full list supported cipher suites. See above for detailes.
 
 ### How to debug?
 
