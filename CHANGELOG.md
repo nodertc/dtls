@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to the "dtls" package will be documented in this file.
 
+## unreleased
+- Update binary-data@0.6.0
+- Added PSK key exchange, [RFC4279](https://tools.ietf.org/html/rfc4279), [RFC5487](https://tools.ietf.org/html/rfc5487). Ciphers:
+  * TLS_PSK_WITH_AES_128_GCM_SHA256
+  * TLS_PSK_WITH_AES_256_GCM_SHA384
+
 ## [0.5.0] - 2018-11-17
 - Drop AES-CCM block cipher
 - Added `timeout` event to detect inactive connections
