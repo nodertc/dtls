@@ -6,6 +6,10 @@ All notable changes to the "dtls" package will be documented in this file.
 - Added PSK key exchange, [RFC4279](https://tools.ietf.org/html/rfc4279), [RFC5487](https://tools.ietf.org/html/rfc5487). Ciphers:
   * TLS_PSK_WITH_AES_128_GCM_SHA256
   * TLS_PSK_WITH_AES_256_GCM_SHA384
+- Added CHACHA20-POLY1305 ciphers:
+  * TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
+  * TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
+  * TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
 
 ## [0.5.0] - 2018-11-17
 - Drop AES-CCM block cipher
