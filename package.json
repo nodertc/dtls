@@ -7,6 +7,7 @@
     "test": "npm run lint && npm run unit-test",
     "lint": "npx eslint --quiet .",
     "unit-test": "npx jest",
+    "integrated-test": "node test/integrated/test.js",
     "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js",
     "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
     "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
@@ -63,7 +64,7 @@
       "<rootDir>/src/node_modules"
     ],
     "testMatch": [
-      "**/test/**/*.js"
+      "**/test/unit/**/*.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
@@ -113,7 +114,10 @@
           }
         },
         "rules": {
-          "require-jsdoc": "off"
+          "require-jsdoc": "off",
+          "security/detect-non-literal-fs-filename": "off",
+          "no-process-exit": "off",
+          "unicorn/no-process-exit": "off"
         }
       },
       {

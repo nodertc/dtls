@@ -1,0 +1,13 @@
+[Unit]
+Description=a sample DTLS echo server
+
+[Service]
+ExecStart=/usr/local/bin/dtlsd
+Restart=no
+User=travis
+Group=travis
+WorkingDirectory=~
+EnvironmentFile=/home/travis/variables.env
+
+[Install]
+WantedBy=multi-user.target
