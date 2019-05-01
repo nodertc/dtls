@@ -42,6 +42,7 @@
     "binary-data": "^0.6.0",
     "buffer-xor": "^2.0.2",
     "debug": "^4.1.0",
+    "is-chacha20-poly1305-supported": "^1.0.0",
     "is-dtls": "^2.0.0",
     "is-stream": "^1.1.0",
     "readable-stream": "^3.0.6",
