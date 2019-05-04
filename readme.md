@@ -114,7 +114,7 @@ Secret data for the identity string of PSK key exchange.
 
 Both clients and servers may have pre-shared keys with several different parties.  The client indicates which key to use by including a "PSK identity" (_see `options.pskIdentity` above_) in the ClientKeyExchange message. To help the client in selecting which identity to use, the server can provide a "PSK identity hint" in the ServerKeyExchange message.
 
-* `options.cipherSuites: number[]`
+* `options.cipherSuites: number[]|string[]`
 
 List of supported by client cipher suites. Default cipher suites:
   - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (_in nodejs v11+ only_)
