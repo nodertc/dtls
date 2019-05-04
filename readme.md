@@ -33,6 +33,7 @@ npm i @nodertc/dtls
 const dtls = require('@nodertc/dtls');
 
 const socket = dtls.connect({
+  type: 'udp4',
   remotePort: 4444,
   remoteAddress: '127.0.0.1',
 });
