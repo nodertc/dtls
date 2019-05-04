@@ -10,6 +10,7 @@ All notable changes to the "dtls" package will be documented in this file.
   * TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
   * TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
   * TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
+- Security fixes.
 
 ## [0.5.0] - 2018-11-17
 - Drop AES-CCM block cipher
