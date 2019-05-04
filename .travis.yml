@@ -1,23 +1,13 @@
-sudo: true
-dist: xenial
-
 language: node_js
 node_js:
   - "10"
+  - "8"
 
-cache:
-  directories:
-    - $HOME/.npm
-    - $TRAVIS_BUILD_DIR/test/fixtures/build
-    - $TRAVIS_BUILD_DIR/test/fixtures/gmp-6.1.2
-    - $TRAVIS_BUILD_DIR/test/fixtures/gnutls-3.5.19
-    - $TRAVIS_BUILD_DIR/test/fixtures/libtasn1-4.13
-    - $TRAVIS_BUILD_DIR/test/fixtures/nettle-3.4
+services:
+  - docker
 
 env:
   global:
-    - GNUTLS_DEBUG_LEVEL=2
-    - CXX=g++-4.8
     - DEBUG=dtls,dtls:*
     - PRIORITY=NORMAL:+AEAD:+ECDHE-ECDSA:+ECDHE-RSA:+RSA:+PSK:+VERS-DTLS1.2
   matrix:
@@ -39,35 +29,13 @@ matrix:
     - node_js: "11"
       env: CIPHER=TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 KEYFILE=key-ecdsa.pem CERTFILE=cert-ecdsa.pem
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-4.8
-      - ca-certificates
-
 before_script:
-  - cd $TRAVIS_BUILD_DIR/test/fixtures && make -j2
-    # prepare systemd
-  - sudo cp "$TRAVIS_BUILD_DIR/test/fixtures/dtlsd" /usr/local/bin/
-  - sudo cp "$TRAVIS_BUILD_DIR/test/fixtures/dtlsd.service" /etc/systemd/system/
-  - sudo chmod 664 /etc/systemd/system/dtlsd.service
-  - touch $HOME/default-priorities
-    # create env file
-  - echo "KEYFILE=$TRAVIS_BUILD_DIR/test/fixtures/$KEYFILE" >> ~/variables.env
-  - echo "CERTFILE=$TRAVIS_BUILD_DIR/test/fixtures/$CERTFILE" >> ~/variables.env
-  - echo "GNUTLS_DEBUG_LEVEL=$GNUTLS_DEBUG_LEVEL" >> ~/variables.env
-  - echo "PRIORITY=$PRIORITY" >> ~/variables.env
-    # start daemon
-  - sudo systemctl daemon-reload
-  - sudo systemctl start dtlsd
-  - systemctl status dtlsd
+  - docker run -d --name dtlsd -p 4444:4444/udp -e "GNUTLS_DEBUG_LEVEL=2" -e "KEYFILE=$KEYFILE" -e "CERTFILE=$CERTFILE" -e "PRIORITY=$PRIORITY" nodertc/dtls-server:1
 
 script:
   - npm test
   - npm run integrated-test
 
 after_script:
-  - sudo journalctl -u dtlsd -o cat
-  - sudo systemctl stop dtlsd
+  - docker logs dtlsd
+  - docker stop dtlsd
