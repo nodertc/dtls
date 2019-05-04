@@ -18,7 +18,3 @@ yarn-error.log*
 *.txt
 /.jest-cache
 .vscode
-test/fixtures/*
-!test/fixtures/Makefile
-!test/fixtures/dtlsd.*
-!test/fixtures/*.pem

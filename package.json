@@ -9,8 +9,7 @@
     "unit-test": "npx jest",
     "integrated-test": "node test/integrated/test.js",
     "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js",
-    "openssl-server": "openssl s_server -cert fixtures/cert.pem -key fixtures/key.pem -dtls1_2 -accept 4444 -msg -mtu 1200 -state -nbio -debug",
-    "gnutls-server": "cd $PWD/fixtures && GNUTLS_DEBUG_LEVEL=100 ./dtls"
+    "gnutls-server": "docker run -it --name dtlsd --rm -e GNUTLS_DEBUG_LEVEL=2 -e PRIORITY=NORMAL:+AEAD:+ECDHE-RSA:+VERS-DTLS1.2 -e KEYFILE=key-rsa.pem -e CERTFILE=cert-rsa.pem -p 4444:4444/udp nodertc/dtls-server:1"
   },
   "keywords": [
     "dtls",

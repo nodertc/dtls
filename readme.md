@@ -165,17 +165,10 @@ Emitted if the socket times out from inactivity. This is only to notify that the
 
 ### How to debug?
 
-Start openssl dtls server:
+Start dtls server:
 
 ```sh
-npm run openssl-server
-```
-
-or start GnuTLS dtls server (more debug messages):
-
-```sh
-# tested in Ubuntu 16, use docker if you are Windows / MacOS user.
-npm run gnutls-server
+docker run -it --name dtlsd --rm -e "GNUTLS_DEBUG_LEVEL=2" -e "PRIORITY=NORMAL:+AEAD:+ECDHE-RSA:+VERS-DTLS1.2" -e "KEYFILE=key-rsa.pem" -e "CERTFILE=cert-rsa.pem" -p 4444:4444/udp nodertc/dtls-server:1
 ```
 
 Start default client:
