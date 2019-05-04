@@ -18,11 +18,9 @@ Secure UDP communications using Datagram Transport Layer Security protocol versi
 
 ### Features
 
-* no native dependecies!
-* modern secure ciphers - AEAD with ECDHE
-* support set / get MTU
-* in / out handshake fragmentation
-* handshake retransmission
+* **no native dependecies!**
+* modern secure ciphers (by default)
+* in-out fragmentation / in-out retransmission
 * merge outgoing handshakes
 
 ### Usage
@@ -187,4 +185,4 @@ npm start
 
 ## License
 
-MIT, 2018 &copy; Dmitriy Tsvettsikh
+MIT, 2018 - 2019 &copy; Dmitriy Tsvettsikh
