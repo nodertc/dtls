@@ -12,6 +12,10 @@ All notable changes to the "dtls" package will be documented in this file.
   * TLS_PSK_WITH_CHACHA20_POLY1305_SHA256 (_nodejs v11+ only_)
 - Users may change ciphers list sent to the server using `options.cipherSuites`
 - Security fixes
+- Added ECDHE_PSK key exchange [#16](https://github.com/nodertc/dtls/issues/16). Ciphers:
+  * TLS_ECDHE_PSK_WITH_AES_128_GCM_SHA256
+  * TLS_ECDHE_PSK_WITH_AES_256_GCM_SHA384
+  * TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256
 
 ## [0.5.0] - 2018-11-17
 - Drop AES-CCM block cipher
