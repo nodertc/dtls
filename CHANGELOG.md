@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to the "dtls" package will be documented in this file.
 
-## unreleased
+## [0.6.0] - 2019-05-05
 - Update binary-data@0.6.0
 - Added PSK key exchange, [RFC4279](https://tools.ietf.org/html/rfc4279), [RFC5487](https://tools.ietf.org/html/rfc5487). Ciphers:
   * TLS_PSK_WITH_AES_128_GCM_SHA256

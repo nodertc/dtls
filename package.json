@@ -1,6 +1,6 @@
 {
   "name": "@nodertc/dtls",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Secure UDP communications using DTLS.",
   "main": "src/index.js",
   "scripts": {
