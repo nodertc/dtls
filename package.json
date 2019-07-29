@@ -45,9 +45,11 @@
     "is-chacha20-poly1305-supported": "^1.0.0",
     "is-dtls": "^2.0.0",
     "is-stream": "^1.1.0",
+    "ms": "^2.1.2",
     "readable-stream": "^3.0.6",
     "sorted-array-functions": "^1.2.0",
     "streamfilter": "^3.0.0",
+    "timeout-refresh": "^1.0.0",
     "unicast": "^1.2.0"
   },
   "devDependencies": {
