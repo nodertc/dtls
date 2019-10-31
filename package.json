@@ -46,6 +46,7 @@
     "is-dtls": "^2.0.0",
     "is-stream": "^1.1.0",
     "ms": "^2.1.2",
+    "next-state": "^1.0.0",
     "readable-stream": "^3.0.6",
     "sorted-array-functions": "^1.2.0",
     "streamfilter": "^3.0.0",
