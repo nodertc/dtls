@@ -57,7 +57,7 @@
     "@nodertc/eslint-config": "^0.2.1",
     "@types/node": "^12.6.2",
     "eslint": "^5.16.0",
-    "jest": "^23.6.0",
+    "jest": "^27.4.7",
     "prettier": "^1.14.3"
   },
   "jest": {
